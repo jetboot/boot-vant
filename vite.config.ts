@@ -6,9 +6,7 @@ import AutoImport from "unplugin-auto-import/vite";
 import { VantResolver } from "unplugin-vue-components/resolvers";
 import Icons from "unplugin-icons/vite";
 import IconsResolver from "unplugin-icons/resolver";
-import Inspect from "vite-plugin-inspect";
 import { VitePWA } from "vite-plugin-pwa";
-import VueDevTools from "vite-plugin-vue-devtools";
 
 // vite.config.ts
 import VueI18nPlugin from "@intlify/unplugin-vue-i18n/vite";
@@ -83,8 +81,8 @@ export default defineConfig({
       registerType: "autoUpdate",
       includeAssets: ["favicon.ico"],
       manifest: {
-        name: "BootVue",
-        short_name: "BootVue",
+        name: "BootVant",
+        short_name: "BootVant",
         theme_color: "#ffffff",
         icons: [
           {
@@ -106,13 +104,6 @@ export default defineConfig({
         ],
       },
     }),
-
-    // https://github.com/antfu/vite-plugin-inspect
-    // Visit http://localhost:3333/__inspect/ to see the inspector
-    Inspect(),
-
-    // https://github.com/webfansplz/vite-plugin-vue-devtools
-    VueDevTools(),
 
     // https://github.com/unocss/unocss
     // see unocss.config.ts for config
