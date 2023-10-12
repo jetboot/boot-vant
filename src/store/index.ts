@@ -1,12 +1,12 @@
-import { counter } from "./counter";
+import type { App } from "vue";
+import { createPinia } from "pinia";
+import { registerPiniaPersistPlugin } from "~/store/plugin/persist";
 
-const appStore: any = {};
+const store = createPinia();
+registerPiniaPersistPlugin(store);
 
-/**
- * 注册app状态库
- */
-export const registerStore = () => {
-  appStore.counter = counter();
-};
+export function setupStore(app: App<Element>) {
+  app.use(store);
+}
 
-export default appStore;
+export { store };

@@ -2,13 +2,12 @@ import { useLocalStorage } from "@vueuse/core";
 import { createApp } from "vue";
 
 // Vue Router
-import { createPinia } from "pinia";
 import { createI18n } from "vue-i18n";
 
 import messages from "@intlify/unplugin-vue-i18n/messages";
 import { router } from "./router";
 
-import { registerStore } from "./store";
+import { setupStore } from "./store";
 import App from "~/App.vue";
 
 // reset css
@@ -23,7 +22,8 @@ app.use(createI18n({
   locale: unref(useLocalStorage("locale", "zh")),
   messages,
 }));
-app.use(createPinia());
-registerStore();
+// Configure store
+// 配置 store
+setupStore(app);
 app.use(router);
 app.mount("#app");
