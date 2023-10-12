@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Navbar from "./Navbar/index.vue";
-import Footer from "./Footer/index.vue";
+import Container from "./Container/index.vue";
 
 defineOptions({
   name: "Layout",
@@ -9,11 +9,10 @@ defineOptions({
 
 <template>
   <div class="font-chinese antialiased">
-    <div class="min-h-screen">
-      <Navbar />
+    <Navbar />
+    <Container>
       <RouterView />
-    </div>
-    <Footer />
+    </Container>
   </div>
 </template>
 
