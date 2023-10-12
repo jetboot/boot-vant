@@ -7,6 +7,7 @@ export * from "./domUtils";
 export * from "./mitt";
 export * from "./moduleHelper";
 export * from "./router";
+export * from "./rules";
 export * from "./typeChecks";
 export * from "./treeHelper";
 export * from "./util";

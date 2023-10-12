@@ -1,10 +1,12 @@
 import { resolve } from "node:path";
+import * as path from "node:path";
 import { defineConfig } from "vite";
 import Vue from "@vitejs/plugin-vue";
 import Components from "unplugin-vue-components/vite";
 import AutoImport from "unplugin-auto-import/vite";
 import { VantResolver } from "unplugin-vue-components/resolvers";
 import Icons from "unplugin-icons/vite";
+import { FileSystemIconLoader } from "unplugin-icons/loaders";
 import IconsResolver from "unplugin-icons/resolver";
 import { VitePWA } from "vite-plugin-pwa";
 
@@ -31,12 +33,15 @@ export default defineConfig({
       },
     ),
     Icons({
-      scale: 1.5, // Scale of icons against 1em
-      defaultStyle: "", // Style apply to icons
-      defaultClass: "inline-block h-5 w-5 stroke-current md:h-6 md:w-6", // Class names apply to icons
+      scale: 1, // Scale of icons against 1em
+      defaultStyle: "width:16px;height:16px", // Style apply to icons
+      defaultClass: "stroke-current", // Class names apply to icons
       compiler: "vue3", // "vue2", "vue3", "jsx"
       jsx: "react", // "react" or "preact"
       autoInstall: true,
+      customCollections: {
+        login: FileSystemIconLoader(path.resolve("src", "assets/icons/login")),
+      },
     }),
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
