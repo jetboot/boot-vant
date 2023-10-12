@@ -1,7 +1,7 @@
 import type { RouteRecordRaw } from "vue-router";
 import { createRouter, createWebHashHistory } from "vue-router";
 import { basicRoutes } from "./routes";
-import NProgress from "~/config/nprogress";
+import NProgress from "~/setting/nprogress";
 
 export const router = createRouter({
   history: createWebHashHistory(),
