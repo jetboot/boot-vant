@@ -5,7 +5,9 @@ defineOptions({
 </script>
 
 <template>
-  home
+  <VanButton type="primary">
+    按钮
+  </VanButton>
 </template>
 
 <style scoped></style>

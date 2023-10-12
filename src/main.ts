@@ -13,7 +13,8 @@ import App from "~/App.vue";
 
 // reset css
 import "@kirklin/reset-css/kirklin.css";
-import "~/styles/main.css";
+import "vant/lib/index.css";
+import "~/styles/main.scss";
 import "uno.css";
 
 const app = createApp(App);

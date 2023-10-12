@@ -10,6 +10,7 @@ declare module 'vue' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     UnoCSSIconButton: typeof import('./../src/components/Icon/UnoCSSIconButton.vue')['default']
+    VanButton: typeof import('vant/es')['Button']
     VanConfigProvider: typeof import('vant/es')['ConfigProvider']
     VanNavBar: typeof import('vant/es')['NavBar']
   }
