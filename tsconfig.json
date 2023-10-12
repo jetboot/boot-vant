@@ -7,11 +7,13 @@
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-      "~/*": ["src/*"]
+      "~/*": ["src/*"],
+      "#/*": ["types/*"]
     },
     "types": [
       "vitest",
       "vite/client",
+      "types",
       "unplugin-icons/types/vue",
       "@intlify/unplugin-vue-i18n/messages"
     ],
