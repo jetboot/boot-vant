@@ -2,8 +2,6 @@
 import { showSuccessToast, showToast } from "vant";
 import { ref, shallowReactive, toRef } from "vue";
 import { useRouter } from "vue-router";
-import LoginEyeOffSvg from "virtual:icons/login/eye-off";
-import LoginEyeOnSvg from "virtual:icons/login/eye-on";
 import { codeRules, mobileRules, passwordRules } from "~/utils";
 import NavBar from "~/layouts/Navbar/index.vue";
 
@@ -68,8 +66,9 @@ const { sendMobileCode, countdownValue, formRef } = useMobileCode(
         :type="loginFormData.showPassword ? 'text' : 'password'"
       >
         <template #button>
-          <LoginEyeOnSvg v-if="loginFormData.showPassword" @click="loginFormData.showPassword = !loginFormData.showPassword" />
-          <LoginEyeOffSvg v-else @click="loginFormData.showPassword = !loginFormData.showPassword" />
+          <!--          TODO -->
+          <!--          <LoginEyeOnSvg v-if="loginFormData.showPassword" @click="loginFormData.showPassword = !loginFormData.showPassword" /> -->
+          <!--          <LoginEyeOffSvg v-else @click="loginFormData.showPassword = !loginFormData.showPassword" /> -->
         </template>
       </VanField>
       <VanField
