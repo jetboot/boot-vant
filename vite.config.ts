@@ -9,10 +9,20 @@ import Icons from "unplugin-icons/vite";
 import { FileSystemIconLoader } from "unplugin-icons/loaders";
 import IconsResolver from "unplugin-icons/resolver";
 import { VitePWA } from "vite-plugin-pwa";
+import GenerateConfig from "unplugin-config/vite";
 
 // vite.config.ts
 import VueI18nPlugin from "@intlify/unplugin-vue-i18n/vite";
 import UnoCss from "unocss/vite";
+
+// This constant defines the name of the configuration file that will be used in the production environment
+const GLOB_CONFIG_FILE_NAME = "_app.config.js";
+
+// This constant sets the output directory for the Vite package
+const OUTPUT_DIR = "dist";
+
+// This constant sets the name of the application
+const APP_NAME = "boot-vant";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -113,6 +123,18 @@ export default defineConfig({
     // https://github.com/unocss/unocss
     // see unocss.config.ts for config
     UnoCss(),
+
+    GenerateConfig({
+      appName: APP_NAME,
+      envVariables: {
+        prefix: "VITE_GLOB_",
+      },
+      configFile: {
+        generate: true,
+        fileName: GLOB_CONFIG_FILE_NAME,
+        outputDir: OUTPUT_DIR,
+      },
+    }),
   ],
   resolve: {
     alias: {
