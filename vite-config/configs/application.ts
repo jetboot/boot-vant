@@ -5,7 +5,7 @@ import { loadEnv } from "vite";
 import { configVitePlugins } from "../plugins";
 import { configureProxy, formatToDateTime, updateEnvVariables } from "../utils";
 
-export async function createApplicationViteConfig(command, mode, cwd) {
+export async function createApplicationViteConfig(command: "build" | "serve", mode: string, cwd: string) {
   const root = cwd;
   const isProductionBuild = command === "build";
   const env: Recordable<string> = loadEnv(mode, root);

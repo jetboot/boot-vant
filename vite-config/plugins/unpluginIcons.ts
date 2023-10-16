@@ -13,8 +13,7 @@ export function createIconsPluginConfig(): PluginOption {
     jsx: "react", // "react" or "preact"
     autoInstall: true,
     customCollections: {
-      // TODO 解决Icons问题
-      login: FileSystemIconLoader(resolve("/src", "assets/icons/login")),
+      login: FileSystemIconLoader(resolve("src", "assets/icons/login")),
     },
   });
 }

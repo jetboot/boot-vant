@@ -7,6 +7,6 @@ export function createVueI18nPluginConfig(): PluginOption {
     runtimeOnly: true,
     compositionOnly: true,
     fullInstall: true,
-    include: [resolve("/src", "/locales/**")],
+    include: [resolve("src", "locales/**")],
   });
 }
