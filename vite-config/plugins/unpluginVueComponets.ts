@@ -10,7 +10,9 @@ export function createVueComponentsPluginConfig(): PluginOption {
     dts: "types/components.d.ts",
     exclude: [/[\\/]node_modules[\\/]/, /[\\/]\.git[\\/]/, /[\\/]\.nuxt[\\/]/],
     resolvers: [
-      IconsResolver(),
+      IconsResolver({
+        customCollections: ["login"],
+      }),
       VantResolver(),
     ],
   });

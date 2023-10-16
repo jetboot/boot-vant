@@ -7,7 +7,7 @@ export function createIconsPluginConfig(): PluginOption {
   // https://github.com/antfu/unplugin-auto-import
   return Icons({
     scale: 1, // Scale of icons against 1em
-    defaultStyle: "width:16px;height:16px", // Style apply to icons
+    defaultStyle: "width:1rem;height:1rem", // Style apply to icons
     defaultClass: "stroke-current", // Class names apply to icons
     compiler: "vue3", // "vue2", "vue3", "jsx"
     jsx: "react", // "react" or "preact"
