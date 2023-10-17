@@ -161,7 +161,7 @@ export function memo<TDeps extends readonly any[], TResult>(
 export function getErrorMessage(error: Error | { message: string } | string): string {
   if (error instanceof Error) {
     return error.message;
-  } else if (typeof error === "object" && "message" in error) {
+  } else if (typeof error === "object" && "toast" in error) {
     return error.message;
   } else {
     return String(error);

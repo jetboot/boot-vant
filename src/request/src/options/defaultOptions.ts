@@ -32,7 +32,7 @@ export const defaultAxiosOptions: CreateAxiosOptions = {
     // 格式化提交参数时间
     shouldFormatDate: true,
     // 消息提示类型
-    errorMessageMode: "message",
+    errorMessageMode: "toast",
     // 接口地址
     apiUrl: globalConfig.API_URL,
     // 接口拼接地址

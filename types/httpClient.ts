@@ -1,4 +1,4 @@
-export type MessageMode = "none" | "dialog" | "message" | "notification" | undefined;
+export type MessageMode = "none" | "dialog" | "toast" | "notification" | undefined;
 
 export interface RequestOptions {
   // Whether to splice request parameters into URL
