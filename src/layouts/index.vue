@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import Navbar from "./Navbar/index.vue";
 import Footer from "./Footer/index.vue";
 import Container from "./Container/index.vue";
 
@@ -10,7 +9,7 @@ defineOptions({
 
 <template>
   <div class="font-chinese antialiased">
-    <Navbar />
+    <!--    <Navbar /> -->
     <Container>
       <RouterView />
     </Container>

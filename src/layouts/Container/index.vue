@@ -14,7 +14,7 @@ defineOptions({
 .container {
   width: 100%;
   height: 100%;
-  padding: 74px 30px;
+  padding: 0;
 }
 
 [data-theme='dark'] {
