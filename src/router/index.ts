@@ -4,7 +4,7 @@ import { basicRoutes } from "./routes";
 import NProgress from "~/setting/nprogress";
 
 export const router = createRouter({
-  history: createWebHashHistory(),
+  history: createWebHashHistory(import.meta.env.VITE_PUBLIC_PATH),
   routes: basicRoutes as unknown as RouteRecordRaw[],
   strict: true,
   // When switching pages, scroll to the top
