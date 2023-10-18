@@ -50,9 +50,9 @@ dependencies:
   pinia-plugin-persistedstate:
     specifier: ^3.2.0
     version: 3.2.0(pinia@2.1.6)
-  postcss-px-to-viewport:
-    specifier: ^1.1.1
-    version: 1.1.1
+  postcss-px-conversion:
+    specifier: ^0.0.2
+    version: 0.0.2(postcss@8.4.29)
   qs:
     specifier: ^6.11.2
     version: 6.11.2
@@ -5868,11 +5868,6 @@ packages:
     resolution: {integrity: sha512-NHj4rzRo0tQdijE9ZqAx6kYDcoRwYwSYzCA8MY3JzfxlrvEU0jhnhJT9BhqhJs7I/dKcrDm6TyulaRqZPIhN5g==}
     dev: true
 
-  /object-assign@4.1.1:
-    resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}
-    engines: {node: '>=0.10.0'}
-    dev: false
-
   /object-inspect@1.12.3:
     resolution: {integrity: sha512-geUvdk7c+eizMNUDkRpW1wJwgfOiOeHbxBR/hLXK1aT6zmVSO0jsQcs7fj6MGw89jC/cjGfLcNOrtMYtGqm81g==}
 
@@ -6130,10 +6125,12 @@ packages:
     hasBin: true
     dev: true
 
-  /postcss-px-to-viewport@1.1.1:
-    resolution: {integrity: sha512-2x9oGnBms+e0cYtBJOZdlwrFg/mLR4P1g2IFu7jYKvnqnH/HLhoKyareW2Q/x4sg0BgklHlP1qeWo2oCyPm8FQ==}
+  /postcss-px-conversion@0.0.2(postcss@8.4.29):
+    resolution: {integrity: sha512-MMWxIFA9uIEYsiNgKS1+lGa3euh04sVtVruaiHhmtgQGNCSMVS8LdqI4wSNoGhyi76qvIYHSQXGzcSZRP5suPA==}
+    engines: {node: '>=16'}
+    peerDependencies:
+      postcss: '>=8.0.0'
     dependencies:
-      object-assign: 4.1.1
       postcss: 8.4.29
     dev: false
 

@@ -2,7 +2,7 @@
 
 module.exports = {
   plugins: {
-    "postcss-px-to-viewport": {
+    "postcss-px-conversion": {
       viewportWidth: 375,
     },
   },
