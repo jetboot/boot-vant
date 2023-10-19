@@ -1,12 +1,19 @@
 import { version } from "../../../package.json";
 import type { GlobConfig, GlobEnvConfig } from "#/config";
 
+function sanitizeString(str: string): string {
+  // Replace invalid characters with an empty string
+  const sanitized = str.replace(/[^\w.-]/g, "");
+  // Trim any remaining whitespace
+  return sanitized.trim().replace(/-/g, "__");
+}
+
 /**
  * Get the configuration file variable name
  * @param env
  */
 export function getAppConfigFileName(env: GlobEnvConfig): string {
-  const shortName: string = env?.VITE_GLOB_APP_SHORT_NAME || "__APP";
+  const shortName: string = sanitizeString(env?.VITE_GLOB_APP_SHORT_NAME || "__APP");
   return `__PRODUCTION__${shortName}__CONF__`.toUpperCase().replace(/\s/g, "");
 }
 
