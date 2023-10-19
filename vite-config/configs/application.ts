@@ -54,8 +54,6 @@ export async function createApplicationViteConfig(command: "build" | "serve", mo
           assetFileNames: "assets/[ext]/[name]-[hash].[ext]",
           manualChunks: {
             vue: ["vue", "pinia", "vue-router"],
-            echarts: ["echarts", "vue-echarts"],
-            celerisComponents: ["@celeris/components", "@celeris/ca-components"],
           },
         },
       },
