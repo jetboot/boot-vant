@@ -23,7 +23,7 @@ const router = useRouter();
 const handleLogout = async () => {
   await showConfirmDialog({
     title: "温馨提示",
-    message: "您是否确认退出信访云APP？",
+    message: "您是否确认退出APP？",
   });
   await router.push("/login");
 };
