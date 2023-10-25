@@ -4,6 +4,7 @@ export * from "./color";
 export * from "./config";
 export * from "./dateUtil";
 export * from "./domUtils";
+export * from "./messageUtils";
 export * from "./mitt";
 export * from "./moduleHelper";
 export * from "./router";
