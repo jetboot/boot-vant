@@ -17,7 +17,7 @@ defineOptions({
   padding: 0;
 }
 
-[data-theme='dark'] {
+[data-theme="dark"] {
   .data-content {
     background: #222;
     color: #fff;

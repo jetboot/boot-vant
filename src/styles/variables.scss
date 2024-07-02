@@ -1,18 +1,18 @@
 :root {
-  --bv-primary: #3491FA;
-  --bv-primary-active: #3491FA50;
-  --bv-plain: #EAF8F6;
-  --bv-orange: #FCA21C;
+  --bv-primary: #3491fa;
+  --bv-primary-active: #3491fa50;
+  --bv-plain: #eaf8f6;
+  --bv-orange: #fca21c;
   --bv-text1: #121826;
-  --bv-text2: #3C3E42;
-  --bv-text3: #6F6F6F;
+  --bv-text2: #3c3e42;
+  --bv-text3: #6f6f6f;
   --bv-tag: #848484;
   --bv-dark: #979797;
-  --bv-tip: #C3C3C5;
-  --bv-disable: #D9DBDE;
-  --bv-line: #EDEDED;
-  --bv-bg: #F6F7F9;
-  --bv-price: #EB5757;
+  --bv-tip: #c3c3c5;
+  --bv-disable: #d9dbde;
+  --bv-line: #ededed;
+  --bv-bg: #f6f7f9;
+  --bv-price: #eb5757;
   /* 覆盖 Vant 的主色变量 */
   --van-primary-color: var(--bv-primary);
 

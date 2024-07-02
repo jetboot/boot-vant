@@ -5,7 +5,7 @@ import { HttpStatusConstants } from "~/request/src/requestConstants";
 
 // 定义一个状态码处理策略接口
 interface CheckStrategy {
-  check(status: number, msg?: string): void;
+  check: (status: number, msg?: string) => void;
 }
 // Processing = 102
 class ProcessingCheckStrategy implements CheckStrategy {

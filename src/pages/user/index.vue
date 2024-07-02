@@ -20,13 +20,13 @@ const tools = [
   { label: "系统设置", path: "/user" },
 ];
 const router = useRouter();
-const handleLogout = async () => {
+async function handleLogout() {
   await showConfirmDialog({
     title: "温馨提示",
     message: "您是否确认退出APP？",
   });
   await router.push("/login");
-};
+}
 </script>
 
 <template>
@@ -120,7 +120,11 @@ const handleLogout = async () => {
   padding: 0 15px 150px;
   &-head {
     height: 200px;
-    background: linear-gradient(180deg, rgb(149, 206, 232), rgba(44, 181, 165, 0));
+    background: linear-gradient(
+      180deg,
+      rgb(149, 206, 232),
+      rgba(44, 181, 165, 0)
+    );
     margin: 0 -15px;
     padding: 0 15px;
     &-top {

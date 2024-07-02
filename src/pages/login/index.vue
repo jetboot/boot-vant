@@ -18,13 +18,13 @@ const loginFormData = shallowReactive({
 const isPasswordLogin = ref(true);
 const smsCode = ref("");
 
-const handleLogin = async () => {
+async function handleLogin() {
   if (!loginFormData.agree) {
     return showToast("请勾选协议");
   }
   showSuccessToast("登录成功");
   await router.replace("/home");
-};
+}
 
 // 发送短信验证码
 const { sendMobileCode, countdownValue, formRef } = useMobileCode(
@@ -103,5 +103,5 @@ const { sendMobileCode, countdownValue, formRef } = useMobileCode(
 </template>
 
 <style lang="scss" scoped>
-@import './index.scss';
+@import "./index.scss";
 </style>

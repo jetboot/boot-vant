@@ -1,9 +1,9 @@
 {
   "name": "boot-vant",
+  "type": "module",
   "version": "0.0.1",
   "private": true,
   "packageManager": "pnpm@9.4.0",
-  "type": "module",
   "description": "template for Vue3 Vant Mobile",
   "keywords": [
     "BootVant",
@@ -69,6 +69,7 @@
     "@vue/test-utils": "^2.4.6",
     "cross-env": "^7.0.3",
     "eslint": "^9.6.0",
+    "eslint-plugin-format": "^0.1.2",
     "husky": "^9.0.11",
     "jsdom": "^24.1.0",
     "lint-staged": "^15.2.7",

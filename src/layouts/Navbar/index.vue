@@ -14,12 +14,12 @@ const emit = defineEmits<{
   (e: "clickRight"): void;
 }>();
 // 2. 使用emit函数来触发自定义事件（点击右侧文字按钮）
-const onClickRight = () => {
+function onClickRight() {
   emit("clickRight");
-};
+}
 const router = useRouter();
 // 3. 回退，了解 history.state 信息，监听箭头的点击事件按条件进行跳转
-const onClickLeft = () => {
+function onClickLeft() {
   if (props.back) {
     return props.back();
   }
@@ -28,7 +28,7 @@ const onClickLeft = () => {
   } else {
     router.push("/");
   }
-};
+}
 </script>
 
 <template>
@@ -45,12 +45,12 @@ const onClickLeft = () => {
 
 <style lang="scss" scoped>
   .van-nav-bar {
-    &__arrow {
-      color: var(--bv-text1);
-      font-size: 18px;
-    }
-    &__title {
-      font-size: 15px;
-    }
+  &__arrow {
+    color: var(--bv-text1);
+    font-size: 18px;
   }
+  &__title {
+    font-size: 15px;
+  }
+}
 </style>
